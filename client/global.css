@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* TailwindV4 theme and design tokens */
+@theme {
+  /* Fonts */
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  /* Data Alchemist Brand Colors */
+  --color-brand-primary: hsl(263 70% 50%);
+  --color-brand-secondary: hsl(221 83% 53%);
+  --color-brand-accent: hsl(284 100% 84%);
+  --color-brand-gradient-start: hsl(263 70% 50%);
+  --color-brand-gradient-end: hsl(221 83% 53%);
+
+  /* Success/Error States */
+  --color-success: hsl(142 76% 36%);
+  --color-success-foreground: hsl(0 0% 100%);
+  --color-warning: hsl(38 92% 50%);
+  --color-warning-foreground: hsl(0 0% 0%);
+  --color-error: hsl(0 84% 60%);
+  --color-error-foreground: hsl(0 0% 100%);
+
+  /* Base Theme */
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(222.2 84% 4.9%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(222.2 84% 4.9%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(222.2 84% 4.9%);
+
+  --color-primary: hsl(263 70% 50%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(210 40% 96.1%);
+  --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+
+  --color-muted: hsl(210 40% 96.1%);
+  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
+
+  --color-accent: hsl(284 100% 96%);
+  --color-accent-foreground: hsl(263 70% 50%);
+
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+
+  --color-border: hsl(214.3 31.8% 91.4%);
+  --color-input: hsl(214.3 31.8% 91.4%);
+  --color-ring: hsl(263 70% 50%);
+
+  --color-sidebar-background: hsl(0 0% 98%);
+  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
+  --color-sidebar-accent: hsl(240 4.8% 95.9%);
+  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --color-sidebar-border: hsl(220 13% 91%);
+  --color-sidebar-ring: hsl(263 70% 50%);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+/* 3D Animations and Effects */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px rgba(107, 38, 217, 0.2),
+      0 0 10px rgba(107, 38, 217, 0.2),
+      0 0 15px rgba(107, 38, 217, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 10px rgba(107, 38, 217, 0.4),
+      0 0 20px rgba(107, 38, 217, 0.4),
+      0 0 30px rgba(107, 38, 217, 0.4);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(107, 38, 217, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(107, 38, 217, 0.6),
+      0 0 60px rgba(107, 38, 217, 0.4);
+  }
+}
+
+@keyframes rotate-y {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-rotate-y {
+  animation: rotate-y 20s linear infinite;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: rotateX(5deg) rotateY(5deg) translateZ(20px);
+}
+
+.glass-morphism {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.text-3d {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1),
+    0 2px 0 rgba(255, 255, 255, 0.05),
+    0 3px 0 rgba(0, 0, 0, 0.1),
+    0 4px 0 rgba(0, 0, 0, 0.05),
+    0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-3d {
+  transform: perspective(1000px) rotateX(0deg);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-3d:hover {
+  transform: perspective(1000px) rotateX(-10deg) translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}

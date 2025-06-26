@@ -1,0 +1,16 @@
+TaskID,TaskName,Category,Duration,RequiredSkills,PreferredPhases,MaxConcurrent
+T001,Frontend Dashboard Development,Development,2,"JavaScript,React","[1,2]",2
+T002,Backend API Implementation,Development,3,"Python,Django","[2,3,4]",1
+T003,Mobile App Development,Development,4,"React Native,iOS","[1,2,3,4]",1
+T004,Database Design,Development,2,"PostgreSQL,MySQL","[1,3]",2
+T005,User Authentication System,Development,3,"Node.js,JWT","[2,3,4]",1
+T006,Payment Gateway Integration,Development,2,"JavaScript,API","[3,4]",1
+T007,UI/UX Design,Design,3,"Figma,Adobe XD","[1,2,3]",2
+T008,Quality Assurance Testing,Testing,2,"Selenium,Testing","[4,5]",3
+T009,Data Analytics Dashboard,Analytics,3,"Python,Tableau","[2,3,4]",1
+T010,DevOps Pipeline Setup,Infrastructure,2,"Docker,Kubernetes","[1,5]",1
+T011,E-commerce Platform,Development,5,"React,Node.js","[1,2,3,4,5]",1
+T012,Inventory Management System,Development,4,"Java,Spring","[2,3,4,5]",1
+T013,Customer Support Portal,Development,3,"Vue.js,PHP","[1,3,4]",2
+T014,Learning Management System,Development,4,"React,Python","[1,2,3,4]",1
+T015,Performance Optimization,Optimization,2,"JavaScript,Profiling","[4,5]",2

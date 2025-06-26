@@ -1,0 +1,9 @@
+ClientID,ClientName,PriorityLevel,RequestedTaskIDs,GroupTag,AttributesJSON
+C001,Tech Corporation,5,"T001,T002",Enterprise,"{""budget"": 100000, ""region"": ""North"", ""industry"": ""Technology""}"
+C002,Marketing Solutions Inc,3,"T003,T004",SMB,"{""budget"": 50000, ""region"": ""South"", ""industry"": ""Marketing""}"
+C003,Global Finance Ltd,5,"T001,T005,T006",Enterprise,"{""budget"": 200000, ""region"": ""East"", ""industry"": ""Finance""}"
+C004,StartupX,2,"T007,T008",Startup,"{""budget"": 25000, ""region"": ""West"", ""industry"": ""Tech Startup""}"
+C005,Healthcare Systems,4,"T009,T010",Healthcare,"{""budget"": 75000, ""region"": ""Central"", ""industry"": ""Healthcare""}"
+C006,Retail Chain Corp,3,"T002,T011",Retail,"{""budget"": 60000, ""region"": ""North"", ""industry"": ""Retail""}"
+C007,Manufacturing Co,4,"T012,T013",Industrial,"{""budget"": 120000, ""region"": ""South"", ""industry"": ""Manufacturing""}"
+C008,Education Partners,2,"T014,T015",Education,"{""budget"": 30000, ""region"": ""East"", ""industry"": ""Education""}"
