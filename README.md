@@ -93,10 +93,8 @@ npm run dev
 ### 📬 Contact
 
 Made with ❤️ by **Harshit Singh**
-[📧 harshitmsingh@gmail.com](mailto:harshitmsingh@gmail.com)
+[📧 harshit.fullstack@gmail.com](mailto:harshit.fullstack@gmail.com)
 [🔗 Portfolio](https://portfolio-orcin-chi-qj1vqllznj.vercel.app/)
-[🌐 LinkedIn](https://linkedin.com/in/hsmanu1205)
-
 ---
 
 </div>
